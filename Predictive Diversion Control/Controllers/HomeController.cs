@@ -36,6 +36,11 @@ namespace Predictive_Diversion_Control
                 waTreatmentCenters = JsonConvert.DeserializeObject<List<TreatmentCenterModel>>(sr.ReadToEnd());
             }
 
+            encapData encap = new encapData();
+            encap.heroinOverdoseList = heroinOverdoseList;
+            encap.prescriptionOverdoseList = prescriptionOverdoseList;
+            encap.waTreatmentCenters = waTreatmentCenters;
+
             //GoogleGeocoder geocoder = new GoogleGeocoder("AIzaSyC5T01Azye6mJJ1XNVyDvDm5QIhLSOIrWE");
             //BingMapsGeocoder bingGeocoder = new BingMapsGeocoder("AjFkeZcTp7ZICdShwZucozyyTwGD4wniT0Gn9d5z7WnoN0ytlugmJYsk7wYLshkC");
 
@@ -67,7 +72,7 @@ namespace Predictive_Diversion_Control
             //System.IO.File.WriteAllText(@"C:\Users\nynph\Desktop\waTreatmentCenters.json", serializeJson);
 
             //ViewBag.Message = country.FormattedAddress;
-            return View(waTreatmentCenters);
+            return View(encap);
         }
     }
 }

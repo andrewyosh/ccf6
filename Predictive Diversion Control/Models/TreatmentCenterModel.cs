@@ -17,4 +17,11 @@ namespace Predictive_Diversion_Control.Models
         public double latitude { get; set; }
         public double longitude{get;set;}
     }
+
+    public class encapData
+    { 
+        public List<OverdosesModel> heroinOverdoseList { get; set; }
+        public List<OverdosesModel> prescriptionOverdoseList { get; set; }
+        public List<TreatmentCenterModel> waTreatmentCenters { get; set; }
+    }
 }

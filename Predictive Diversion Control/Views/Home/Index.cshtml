@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Predictive_Diversion_Control.Models.TreatmentCenterModel>
+﻿@model Predictive_Diversion_Control.Models.encapData
 
 
 
@@ -20,23 +20,16 @@
           center: new google.maps.LatLng(47.402,-120.311)
         });
 
-        // Create a <script> tag and set the USGS URL as the source.
-        //var script = document.createElement('script');
-        // This example uses a local copy of the GeoJSON stored at
-        // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-        //script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
-        //document.getElementsByTagName('head')[0].appendChild(script);
-
         addFaciityMarkers();
+        addHeroinMarkers();
+        addPrescribMarkers()
       }
-        //alert(@Html.Raw(Json.Encode(Model)));
 
       // Loop through the results array and place a marker for each
       // set of coordinates.
       function addFaciityMarkers() {
-        var facList = @Html.Raw(Json.Encode(Model));
+        var facList = @Html.Raw(Json.Encode(Model.waTreatmentCenters));
         for (var i = 0; i < facList.length; i++) {
-            //alert(facList[i].latitude + " " + facList[i].longitude);
           var latLng = new google.maps.LatLng(parseFloat(facList[i].latitude), parseFloat(facList[i].longitude));
           var marker = new google.maps.Marker({
             position: latLng,
@@ -44,9 +37,47 @@
           });
         }
       }
+
+      function addHeroinMarkers() {
+        var facList = @Html.Raw(Json.Encode(Model.heroinOverdoseList));
+        for (var i = 0; i < facList.length; i++) {
+            //alert(facList[i].latitude + " " + facList[i].longitude);
+          var latLng = new google.maps.LatLng(parseFloat(facList[i].latitude), parseFloat(facList[i].longitude));
+          var radius = 150 * facList[i].count;
+        var circle = new google.maps.Circle({
+            strokeColor: '#de31b5',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#de31b5',
+            fillOpacity: 0.35,
+            map: map,
+            center: latLng,
+            radius: radius
+          });
+
+        }
+      }
+
+      function addPrescribMarkers() {
+        var facList = @Html.Raw(Json.Encode(Model.prescriptionOverdoseList));
+        for (var i = 0; i < facList.length; i++) {
+          var latLng = new google.maps.LatLng(parseFloat(facList[i].latitude), parseFloat(facList[i].longitude));
+          var radius = 150 * facList[i].count;
+        var circle = new google.maps.Circle({
+            strokeColor: '#5080ef',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#5080ef',
+            fillOpacity: 0.35,
+            map: map,
+            center: latLng,
+            radius: radius
+          });
+
+        }
+      }
     </script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARc3jQX3XqeCGAVh5DNSI3hTPKg6seHWs&callback=initMap">
     </script>
-    <p>@Model.First().latitude</p>
 </body>
