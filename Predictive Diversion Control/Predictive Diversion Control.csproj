@@ -1629,7 +1629,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\IndexAsync.cshtml" />
     <Content Include="Views\Home\GatherDataAsync.cshtml" />
   </ItemGroup>
   <ItemGroup>
