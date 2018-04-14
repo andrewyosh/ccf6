@@ -19,6 +19,18 @@
         var prescriptionBubblesArray = [];
         var numDeaths = 0;
         var numFacilities = 0;
+
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 6.7,
@@ -232,5 +244,14 @@
     <p style="color:lightgrey"><input id="checkBox" type="checkbox" onclick="clearMarkers()" checked="checked" /> Facilities<img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png" /> Impact Facility<img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" /></p> 
 
     <p style="color:lightgrey"><input id="prescriptionBox" type="checkbox" onclick="clearPrescriptionBubbles()" checked="checked" />Prescription Deaths <img style="width:20px;height:20px;" src="http://www.clker.com/cliparts/0/w/P/n/G/3/blue-circle-md.png" /> <input id="heroinBox" type="checkbox" onclick="clearHeroinBubbles()" checked="checked" /> Heroin Deaths <img style="width:25px;height:25px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Location_dot_red.svg/1000px-Location_dot_red.svg.png" /><p />
+</div>
 
+<div style="color:black; padding:10px;margin-top:20px;text-align:center;margin: 0 auto;width: 500px;height:170px;border-bottom-left-radius:25px;border-bottom-right-radius:25px; ">
+    <h2 style="color:black;text-align:center;">Instructions:</h2>
+    <p>Click on facilities to see their names.</p>
+    <p>Click anywhere on the map to place a marker.</p>
+    <p>     Click and drag to move the marker!</p>
+    <p>The marker will have an associated cost.</p>
+    <p>Click anywhere on the map to add even more markers.</p>
+    <p>Right-click to delete a user-placed marker.</p>
 </div>

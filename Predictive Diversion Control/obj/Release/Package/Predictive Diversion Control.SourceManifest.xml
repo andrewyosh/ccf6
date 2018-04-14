@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\nynph\Documents\WWKD\CCF6\ccf6\Predictive Diversion Control\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Users\nynph\Documents\WWKD\CCF6\ccf6\Predictive Diversion Control\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\nynph\Documents\WWKD\CCF6\ccf6\Predictive Diversion Control\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

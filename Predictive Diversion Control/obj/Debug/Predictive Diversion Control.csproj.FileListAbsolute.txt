@@ -219,7 +219,6 @@ C:\Users\nynph\Documents\WWKD\CCF6\ccf6\Predictive Diversion Control\bin\Microso
 C:\Users\nynph\Documents\WWKD\CCF6\ccf6\Predictive Diversion Control\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\nynph\Documents\WWKD\CCF6\ccf6\Predictive Diversion Control\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\nynph\Documents\WWKD\CCF6\ccf6\Predictive Diversion Control\bin\Microsoft.AI.Web.xml
-C:\Users\nynph\Documents\WWKD\CCF6\ccf6\Predictive Diversion Control\obj\Debug\Predictive Diversion Control.csprojResolveAssemblyReference.cache
 C:\Users\nynph\Documents\WWKD\CCF6\ccf6\Predictive Diversion Control\obj\Debug\Predictive Diversion Control.csproj.CoreCompileInputs.cache
 C:\Users\nynph\Documents\WWKD\CCF6\ccf6\Predictive Diversion Control\obj\Debug\Predictive Diversion Control.dll
 C:\Users\nynph\Documents\WWKD\CCF6\ccf6\Predictive Diversion Control\obj\Debug\Predictive Diversion Control.pdb
