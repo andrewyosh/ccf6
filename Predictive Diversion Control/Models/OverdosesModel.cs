@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace ccf6.Models
+namespace Predictive_Diversion_Control.Models
 {
     public class OverdosesModel
     {        
